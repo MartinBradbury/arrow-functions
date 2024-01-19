@@ -73,3 +73,29 @@ console.log('object 3:', obj3);
 
 let arr5 = [...arr1, { ...obj3}, ...arr4, { ...obj1}, "x", "y", "z" ];
 console.log(arr5)
+
+// Rest function
+//simple arrow function.
+
+const sumAll1 = (a, b, c) => a + b + c;
+let sum1 = sumAll1(1, 2, 3);
+
+console.log(sum1)
+
+// Extra numbers added are ignored
+
+let summ2 = sumAll1(1, 2, 3, 4, 5, 6, 7, 8, 9);
+console.log(summ2);
+
+// Rest function (the ...rest can be called anything you want.)
+
+const sumRest = (a, b, c, ...rest) => {
+    let sum = a + b + c;
+    for(let i of rest ) {
+        sum += i;
+    }
+    return sum;
+}
+
+let summ3 = sumRest(1, 2, 3, 4, 5, 6, 7, 8);
+console.log(summ3);
