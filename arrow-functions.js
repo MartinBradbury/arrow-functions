@@ -102,8 +102,67 @@ console.log(summ3);
 
 // Destructuring 
 
+//this is not destructuring
 let ages = [21, 33, 69];
 
-let martin = ages[0];
+// let martin = ages[0];
+// let michael = ages[1];
+// let alex = ages[2];
 
-console.log(martin)
+//destructuring below - commented out code above.
+
+let [martin, michael, alex] = ages;
+
+console.log(martin, michael, alex)
+
+// Destructuing objects
+
+let jobs = {
+    mar: 'teacher',
+    mic: 'developer',
+    ale: 'music',
+};
+
+let {mar, mic, ale} = jobs;
+
+console.log(mar, mic, ale);
+
+//destructuring subsets.
+
+let lang = ['english', 'french', 'spanish', 'german'];
+
+let [,,jasonNative, jasonSecond] = lang; //the ,, skip first 2 objects in the array.
+
+console.log(jasonNative, jasonSecond);
+
+
+//destructuring
+let lang2 = {
+    first: 'eng',
+    second: 'fre',
+    third: 'ger',
+    forth: 'mex'
+};
+
+let {first, forth} = lang2;
+
+console.log(first, forth)
+
+
+//destructuing using rest paramater.
+
+let fruit = ['apple', 'bananna', 'peach', 'lemon'];
+let [fav, sec, ...other] = fruit;
+console.log(fav, sec, other);
+
+
+//destructure 
+let people = {
+    jon: 'apple',
+    carl: 'spice',
+    sophine: 'potato'
+};
+
+let {jon, carl, ...rest} = people;
+
+console.log(jon, carl, rest);
