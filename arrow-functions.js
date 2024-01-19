@@ -57,3 +57,19 @@ let arr4 = [...arr3];
 
 arr4.push(8);
 console.log(arr4);
+
+// copying an object
+
+let obj1 = {a:1, b:2, c:3};
+let obj2 = {...obj1};
+//pushed a new number to b, does not affect other opjects.
+let obj3 = {...obj1, b:9};
+
+
+console.log('object 2:', obj2);
+console.log('object 3:', obj3);
+
+// copying part of an array
+
+let arr5 = [...arr1, { ...obj3}, ...arr4, { ...obj1}, "x", "y", "z" ];
+console.log(arr5)
