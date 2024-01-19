@@ -40,3 +40,20 @@ const returnMultipleLines = () => (
     lines`
 );
 console.log(returnMultipleLines());
+
+
+// spread oporators
+// 2 arrays. When you push a value to array 2, it also changes it in array 1.
+let arr1 = [1,2,3];
+let arr2 = arr1;
+arr2.push(6)
+console.log(arr2)
+
+// copying an array
+// This copies an array and when you push a number to copied array, it does not affect the first array.
+
+let arr3 = [5,6,7];
+let arr4 = [...arr3];
+
+arr4.push(8);
+console.log(arr4);
