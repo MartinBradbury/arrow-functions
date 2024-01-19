@@ -166,3 +166,9 @@ let people = {
 let {jon, carl, ...rest} = people;
 
 console.log(jon, carl, rest);
+
+
+//map(), filter(), reduce(),
+//map = executes a function on all the objects of an array.
+//filter - filters out objects in an array
+//reduce = reduces all elements to a single output
