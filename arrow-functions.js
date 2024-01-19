@@ -99,3 +99,11 @@ const sumRest = (a, b, c, ...rest) => {
 
 let summ3 = sumRest(1, 2, 3, 4, 5, 6, 7, 8);
 console.log(summ3);
+
+// Destructuring 
+
+let ages = [21, 33, 69];
+
+let martin = ages[0];
+
+console.log(martin)
