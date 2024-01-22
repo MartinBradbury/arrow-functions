@@ -192,3 +192,14 @@ vals.map(multiplyByTwo);
 
 const mapResults = vals.map(multiplyByTwo);
 console.log(mapResults);
+
+
+//simplified with map() method.
+
+const simplified = vals.map(function (val) {return val * 2});
+console.log(simplified);
+
+//simplified further with arrow function
+
+const arrow1 = vals.map(val => val * 2);
+console.log(arrow1);
