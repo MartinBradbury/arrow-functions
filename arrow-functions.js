@@ -203,3 +203,31 @@ console.log(simplified);
 
 const arrow1 = vals.map(val => val * 2);
 console.log(arrow1);
+
+//With objects
+
+const students = [
+    {
+        id: '1',
+        name: 'martin',
+        profession: 'developer',
+        skill: 'java'
+},
+{
+    id: '2',
+        name: 'carl',
+        profession: 'teacehr',
+        skill: 'people'
+
+},
+{
+    id: '3',
+        name: 'sara',
+        profession: 'smith',
+        skill: 'metal'
+
+},
+];
+
+const studentsWithIds = students.map(student => [student.id, student.profession, student.name]);
+console.log(studentsWithIds);
