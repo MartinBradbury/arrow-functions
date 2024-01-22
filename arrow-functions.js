@@ -172,3 +172,23 @@ console.log(jon, carl, rest);
 //map = executes a function on all the objects of an array.
 //filter - filters out objects in an array
 //reduce = reduces all elements to a single output
+
+//simple for loop no map function.
+let vals = [1,2,3,4,5];
+let valResults = [];
+
+for (let val of vals) {
+    valResults.push(val * 2)
+};
+
+console.log(valResults);
+
+// using map() method
+const multiplyByTwo = function(val) {
+    return val * 2;
+};
+
+vals.map(multiplyByTwo);
+
+const mapResults = vals.map(multiplyByTwo);
+console.log(mapResults);
