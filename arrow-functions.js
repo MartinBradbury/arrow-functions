@@ -287,3 +287,6 @@ const has5YrsExp = skill => skill.yrsexp >=5;
 const hasStrongSkills = students2 => students2.skill.filter(has5YrsExp).length > 0;
 const candidates = students2.filter(hasStrongSkills);
 console.log(candidates)
+
+nameOfCand = candidates.map(c => c.name);
+console.log(nameOfCand);
