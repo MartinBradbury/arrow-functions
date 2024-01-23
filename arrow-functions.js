@@ -290,3 +290,10 @@ console.log(candidates)
 
 nameOfCand = candidates.map(c => c.name);
 console.log(nameOfCand);
+
+//reduce method
+
+const sumReduce = [1, 2, 3, 4, 5, 6];
+
+let sumRed = sumReduce.reduce((acc, curr) => acc + curr);
+console.log(sumRed);
