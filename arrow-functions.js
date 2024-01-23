@@ -211,20 +211,23 @@ const students = [
         id: '1',
         name: 'martin',
         profession: 'developer',
-        skill: 'java'
+        skill: 'java',
+        age: 41
 },
 {
     id: '2',
         name: 'carl',
         profession: 'teacehr',
-        skill: 'people'
+        skill: 'people',
+        age: 12
 
 },
 {
     id: '3',
         name: 'sara',
         profession: 'smith',
-        skill: 'metal'
+        skill: 'metal',
+        age: 22
 
 },
 ];
@@ -233,3 +236,9 @@ const studentsWithIds = students.map(student => [student.id, student.profession,
 console.log(studentsWithIds);
 
 // filter() methods. below...
+
+const oldEnough = students.filter(person => person.age >= 22);
+console.log(oldEnough);
+
+const sara = students.filter(p => p.name === 'sara') //[0] can be used;
+console.log(sara)
