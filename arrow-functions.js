@@ -300,3 +300,61 @@ let sumRedInitialValue = sumReduce.reduce((acc, curr) => acc + curr, 10);
 
 console.log(sumRed);
 console.log(sumRedInitialValue);
+
+//totalling a specific object property (ages from students 2 array)
+
+let totalAges = students2.reduce((acc, curr) => acc + curr.age, 0);
+console.log(totalAges);
+
+
+// Grouping by a property and totaling it too.
+
+const teamMember = [
+    {
+        name: 'mark',
+        prof: 'developer',
+        yearxp: 5
+
+    },
+    {
+        name: 'steve',
+        prof: 'developer',
+        yearxp: 8
+
+    },
+    {
+        name: 'paul',
+        prof: 'designer',
+        yearxp: 2
+
+    },
+    {
+        name: 'jon',
+        prof: 'designer',
+        yearxp: 6
+
+    },
+];
+
+let experienceByProfession = teamMember.reduce((acc, curr) => {
+    let key = curr.prof;
+    if (!acc[key]) {
+        acc[key] = curr.yearxp;
+    } else {
+        acc[key] += curr.yearxp;
+    }
+    return acc;
+},{})
+console.log(experienceByProfession);
+
+let nameOfEmployees = teamMember.reduce((acc, curr) => {
+    let emp = curr.prof;
+    if (!acc[emp]) {
+        acc[emp] = curr.name;
+    } else {
+        acc[emp] += curr.name;
+    }
+    return acc;
+},{});
+
+console.log(nameOfEmployees);
