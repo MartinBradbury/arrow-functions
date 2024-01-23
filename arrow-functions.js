@@ -242,3 +242,48 @@ console.log(oldEnough);
 
 const sara = students.filter(p => p.name === 'sara') //[0] can be used;
 console.log(sara)
+
+
+
+const students2 = [
+    {
+        id: '1',
+        name: 'martin',
+        profession: 'developer',
+        skill: [
+            {name: 'java', yrsexp: 2},
+            {name: 'python', yrsexp: 5},
+            {name: 'css', yrsexp: 1}
+        ],
+        age: 41
+},
+{
+    id: '2',
+        name: 'carl',
+        profession: 'teacehr',
+        skill: [
+            {name: 'java', yrsexp: 1},
+            {name: 'python', yrsexp: 9},
+            {name: 'css', yrsexp: 0}
+        ],
+        age: 12
+
+},
+{
+    id: '3',
+        name: 'sara',
+        profession: 'smith',
+        skill: [
+            {name: 'java', yrsexp: 1},
+            {name: 'python', yrsexp: 0},
+            {name: 'css', yrsexp: 1}
+        ],
+        age: 22
+
+},
+];
+
+const has5YrsExp = skill => skill.yrsexp >=5;
+const hasStrongSkills = students2 => students2.skill.filter(has5YrsExp).length > 0;
+const candidates = students2.filter(hasStrongSkills);
+console.log(candidates)
