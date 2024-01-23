@@ -296,4 +296,7 @@ console.log(nameOfCand);
 const sumReduce = [1, 2, 3, 4, 5, 6];
 
 let sumRed = sumReduce.reduce((acc, curr) => acc + curr);
+let sumRedInitialValue = sumReduce.reduce((acc, curr) => acc + curr, 10);
+
 console.log(sumRed);
+console.log(sumRedInitialValue);
