@@ -232,4 +232,4 @@ const students = [
 const studentsWithIds = students.map(student => [student.id, student.profession, student.name]);
 console.log(studentsWithIds);
 
-// filter methods. below
+// filter methods. below...
